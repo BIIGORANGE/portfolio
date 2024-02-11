@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
 body {
     min-height: 100%;
     margin: 2%;
@@ -5,8 +16,6 @@ body {
 
 html {
     font-size: 4vw;
-    font-family: sans-serif;
-    font-weight: bold;
 }
 
 p {
@@ -26,6 +35,30 @@ h2 {
     padding: 0;
 }
 
+
+details {
+    margin: 0;
+    padding: 0;
+}
+
+details > summary {
+    font-weight: 200;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    margin:0;
+    padding: 0;
+}
+
+details > summary:hover {
+    text-decoration: underline;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+  
+
 .flex {
     width: 100%;
     display: flex;
@@ -40,36 +73,20 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: top;
 }
 
 .gallery img {
-    max-width: 700px;
-    object-fit: cover;
+   width: 100%;
+   object-fit: contain;
 }
 
-details {
-    margin: 0;
-    padding: 0;
-}
-
-details > summary {
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-    margin:0;
-    padding: 0;
-}
-
-details > summary:hover {
-    text-decoration: underline;
-}
-
-details > summary::-webkit-details-marker {
-    display: none;
-  }
-  
 @media only screen and (min-width: 820px) {
+    .gallery img {
+        width: 50%;
+        object-fit: contain;
+     }
     body {
         min-height: 100%;
         margin: 1%;
